@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="index.html">
+    <title>Carta</title>
+</head>
+
+<body>
+    <header>
+        <p>De: Wesley</p>
+        <p>Para: Aline Lorena</p>
+    </header>
+    <div id="conteudo">
+        <h1>Aline...</h1>
+        <p>Tem algo que quero muito lhe dizer, quando você chegou havia um vazio muito grande em meu coração, faltava motivos para seguir em frente, não me sentia bem comigo mesmo e sem ânimo para viver, depois de tanto conversar você começou a me fazer rir, me sentir melhor, e começar a ter esperanças, muito rezei a Deus para me colocar no caminho certo e foi ai que você apareceu de mancinho, como quem não quer nada, com esse sotaque lindo e jeito de falar todo meigo, quem imaginaria que eu encontraria paz a 4329 km de distância, tão longe, definitivamente do outro lado do país, mas toda essa distância não nos abalou, diferente fuso horário e muitos quilometros não foram suficientes para nos fazer desistir, isso só demonstra como os propósitos de Deus são incompreensíveis aos olhos humanos, tantas diferenças mas que nos fizeram cada vez mais ter um carinho um pelo outro, tantos dias, semanas e meses desde o primeiro contado e não passamos um dia se quer sem trocar mensagens, tivemos momentos turbulentos mas passamos por cima disso, assim como tem que ser, com conversa, carinho e com o propósito de nada nos abalar, cada dia mais fomos trilhando nossos caminhos, fomos quebrando barreiras e subindo o nível, uiuiui, como eu gosto disso, não vejo a hora de poder chegar no nível final, se é que me entende hehehe; Sou muito feliz em ter te conhecido, graças a você voltei a me encontrar, tenho melhorado, evoluido, estudado e estou disposto a crescer ainda mais ao seu lado resta saber se você também está disposta a viver momentos incríveis ao meu lado...</p>
+        <h2>Aline Lorena, você aceita namorar comigo?</h2>
+        <h2>Faça a sua escolha:</h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+    </div>
+<div id="rodape">
+    <h4>&copy; Wesley Horquen da Silva</h4>
+</div>
+</body>
+
+<style>
+    header {
+        background-color: #000000;
+        padding: 10px;
+        position: relative;
+    }
+    h1 {
+        color: white;
+        padding: 40px;
+    }
+    p {
+        color: white;
+        font-family: cursive;
+        padding: 10px;
+        font-size: 25px;
+    }
+    #conteudo {
+        background: #000000;
+        padding: 40px 25px;
+        position: relative;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h2 {
+        color: white;
+        margin: 50px;
+    }
+    h4 {
+        color: white;
+        padding: 10px;
+    }
+    .btn {
+        background: blueviolet;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        width: 80px;
+        border-radius: 10px;
+    }
+    #rodape {
+        background-color: black;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("PARABÉNS! Você escolheu ser feliz!! <3");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://www.youtube.com/watch?v=JwNmNoWrz70";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+</html>
